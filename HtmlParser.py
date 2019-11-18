@@ -48,8 +48,9 @@ class HtmlParser(object):
         data['url'] = page_url
         title = soup.find('dd', class_='lemmaWgt-lemmaTitle-title').find('h1')
         data['title'] = title.get_text()
-        summary = soup.find('div', class_='lemma-summary')
+        summary = soup.find('div', class_='lemma-summary').get_text().strip().replace('\n','')
         # 获取tag中包含的所有文本内容，包括子孙tag中的内容，并将结果作为Unicode字符串返回
-        data['summary'] = summary.get_text()
+        data['summary'] = summary.replace('[1]', '').replace('[2]', '')
+        print(data['summary'])
         return data
 
