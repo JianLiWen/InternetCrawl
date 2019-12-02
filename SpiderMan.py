@@ -34,4 +34,4 @@ class SpiderMan(object):
 
 
 spider_man = SpiderMan()
-spider_man.crawl("https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/284033?fr=aladdin")
+spider_man.crawl("https://baike.baidu.com/item/%E7%A1%AC%E4%BB%B6")
